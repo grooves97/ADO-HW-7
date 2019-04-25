@@ -30,7 +30,7 @@ namespace Warehouse
                 return;
 
             Product product = new Product();
-            product.Name = form2.textBoxInfo.Text;
+            product.Name = form2.textBoxProduct.Text;
 
             warehouseDb.Products.Add(product);
             warehouseDb.SaveChanges();
@@ -51,14 +51,14 @@ namespace Warehouse
 
                 Form2 form2 = new Form2();
 
-                form2.textBoxInfo.Text = product.Name;
+                form2.textBoxProduct.Text = product.Name;
 
                 DialogResult result = form2.ShowDialog(this);
 
                 if (result == DialogResult.Cancel)
                     return;
 
-                product.Name = form2.textBoxInfo.Text;
+                product.Name = form2.textBoxProduct.Text;
 
                 warehouseDb.SaveChanges();
                 dataGridViewWarehouse.DataSource = warehouseDb.Products.ToList();

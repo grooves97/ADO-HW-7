@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxInfo = new System.Windows.Forms.TextBox();
+            this.textBoxProduct = new System.Windows.Forms.TextBox();
             this.buttonYes = new System.Windows.Forms.Button();
             this.buttonNo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBoxInfo
+            // textBoxProduct
             // 
-            this.textBoxInfo.Location = new System.Drawing.Point(76, 41);
-            this.textBoxInfo.Name = "textBoxInfo";
-            this.textBoxInfo.Size = new System.Drawing.Size(100, 20);
-            this.textBoxInfo.TabIndex = 0;
+            this.textBoxProduct.Location = new System.Drawing.Point(76, 41);
+            this.textBoxProduct.Name = "textBoxProduct";
+            this.textBoxProduct.Size = new System.Drawing.Size(100, 20);
+            this.textBoxProduct.TabIndex = 0;
             // 
             // buttonYes
             // 
@@ -48,6 +48,7 @@
             this.buttonYes.TabIndex = 1;
             this.buttonYes.Text = "Ok";
             this.buttonYes.UseVisualStyleBackColor = true;
+            this.buttonYes.Click += new System.EventHandler(this.ButtonYes_Click);
             // 
             // buttonNo
             // 
@@ -65,7 +66,7 @@
             this.ClientSize = new System.Drawing.Size(258, 227);
             this.Controls.Add(this.buttonNo);
             this.Controls.Add(this.buttonYes);
-            this.Controls.Add(this.textBoxInfo);
+            this.Controls.Add(this.textBoxProduct);
             this.Name = "Form2";
             this.Text = "FormInfo";
             this.ResumeLayout(false);
@@ -75,7 +76,7 @@
 
         #endregion
 
-        protected internal System.Windows.Forms.TextBox textBoxInfo;
+        protected internal System.Windows.Forms.TextBox textBoxProduct;
         private System.Windows.Forms.Button buttonYes;
         private System.Windows.Forms.Button buttonNo;
     }
